@@ -21,6 +21,10 @@
       "app",
       "kebab-case"
     ],
+    "semicolon": [
+      false,
+      "never"
+    ],
     "import-blacklist": [
       true,
       "rxjs/Rx"

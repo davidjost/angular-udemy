@@ -11,7 +11,7 @@
 <p>User Name is: {{userName}} </p>
 <button
   class="btn btn-primary"
-  [disabled]="!allowNewUser"
+  [disabled]="userName === ''"
   (click)="onCreateUser()"
 >Add User '{{userName}}'</button>
 
@@ -26,7 +26,7 @@
   [disabled]="!allowNewServer"
   (click)="onCreateServer()">Add Server '{{serverName}}'</button>
 
-  <p>{{serverCreationStatus}}</p>
+  <p *ngIf="serverCreated">{{serverCreationStatus}}</p>
 
 <app-server></app-server>
 <app-server></app-server>

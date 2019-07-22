@@ -7,12 +7,13 @@ import { TargetLocator } from 'selenium-webdriver';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-  allowNewServer = false
-  allowNewUser = false
-  serverCreationStatus = 'No server was created'
-  userCreationStatus = 'No user was created'
-  serverName = 'DEFAULT'
   userName = ''
+  allowNewUser = false
+  userCreationStatus = 'No user was created'
+  serverName = ''
+  allowNewServer = false
+  serverCreationStatus = 'No server was created'
+  serverCreated = false
 
   constructor() {
     setTimeout(() => {
@@ -32,13 +33,13 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
+    this.serverCreated = true
     this.serverCreationStatus = 'server ' + this.serverName + ' was created!'
   }
 
   onCreateUser() {
     this.userCreationStatus = 'user ' + this.userName + ' was created!'
     this.userName = ''
-    this.allowNewUser = false
   }
 
   onUpdateServerName(event) {
