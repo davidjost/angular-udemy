@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
-import { WarningAlert } from './warningAlert/warningAlert.component';
+import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 
 // this is a decorator as well
@@ -14,7 +14,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
     AppComponent,
     ServerComponent,
     ServersComponent,
-    WarningAlert,
+    WarningAlertComponent,
     SuccessAlertComponent,
   ],
   imports: [

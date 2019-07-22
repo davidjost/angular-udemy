@@ -1,0 +1,12 @@
+:host {
+  color: crimson;
+  padding: 20px;
+  background-color: rgb(255, 210, 210);
+  border: 1px solid crimson;
+  display: block;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
