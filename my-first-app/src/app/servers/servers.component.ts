@@ -14,6 +14,10 @@ export class ServersComponent implements OnInit {
   allowNewServer = false
   serverCreationStatus = 'No server was created'
   serverCreated = false
+  servers = ['Server Miami', 'Server Philly', 'server NYC']
+  detailsShown = false
+  logClicks = []
+  counter = 0
 
   constructor() {
     setTimeout(() => {
@@ -23,6 +27,15 @@ export class ServersComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  toggleDetails() {
+    this.logClicks.push(new Date())
+    console.log(this.logClicks);
+
+    this.detailsShown = !this.detailsShown
+    this.counter++
+  }
+
 
   allowUserAdding(event) {
     if (event.target.value !== '') {
@@ -34,6 +47,7 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreated = true
+    this.servers.push(this.serverName)
     this.serverCreationStatus = 'server ' + this.serverName + ' was created!'
   }
 
